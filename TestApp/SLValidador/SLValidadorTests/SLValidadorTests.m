@@ -32,6 +32,15 @@
     }
 }
 
+- (void)testNIFFailures{
+    SLValidador *validador = [[SLValidador alloc] init];
+    NSInteger result = [validador vNif:@"12345678H"];
+    
+    if(result != SLValidador_NIF_ERROR_DC){
+        XCTFail(@"Failed NIF validation returns %ld expected %ld", result, SLValidador_NIF_ERROR_DC);
+    }
+}
+
 - (void)testNIFExceptions{
     SLValidador *validador = [[SLValidador alloc] init];
     NSInteger result = [validador vNif:@"00000001R"];
@@ -52,17 +61,33 @@
 
     result = [validador vNif:@"A58869389"];
 
-    if(result != SLValidador_CIF_EXTRANJERO_OK){
-        XCTFail(@"Failed CIF validation returns %ld expected %ld", result, SLValidador_CIF_EXTRANJERO_OK);
+    if(result != SLValidador_CIF_NORESIDENTES_OK){
+        XCTFail(@"Failed CIF validation returns %ld expected %ld", result, SLValidador_CIF_NORESIDENTES_OK);
     }
 
     result = [validador vNif:@"A08015497"];
     
-    if(result != SLValidador_CIF_EXTRANJERO_OK){
+    if(result != SLValidador_CIF_NORESIDENTES_OK){
         XCTFail(@"Failed CIF validation returns %ld expected %ld", result, SLValidador_CIF_NORESIDENTES_OK);
     }
+
+    result = [validador vNif:@"B83691469"];
+    
+    if(result != SLValidador_CIF_NORESIDENTES_OK){
+        XCTFail(@"Failed CIF validation returns %ld expected %ld", result, SLValidador_CIF_NORESIDENTES_OK);
+    }
+
+    
 }
 
+- (void)testCIFFailures{
+    SLValidador *validador = [[SLValidador alloc] init];
+    NSInteger result = [validador vNif:@"B83691468"];
+    
+    if(result != SLValidador_CIF_ERROR_DC){
+        XCTFail(@"Failed CIF validation returns %ld expected %ld", result, SLValidador_CIF_ERROR_DC);
+    }
+}
 
 
 @end
