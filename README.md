@@ -1,7 +1,7 @@
 SLValidador
 ===========
 
-An objective-c class to check Spanish NIF, DNI and CIF numbers.
+An objective-c class to validate Spanish NIF, DNI and CIF numbers.
 
 ## General
 
