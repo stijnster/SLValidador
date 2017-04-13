@@ -14,6 +14,8 @@
 		6AFB21A71E9F8ABC000055C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AFB21A61E9F8ABC000055C0 /* Assets.xcassets */; };
 		6AFB21AA1E9F8ABC000055C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFB21A81E9F8ABC000055C0 /* LaunchScreen.storyboard */; };
 		6AFB21B51E9F8ABC000055C0 /* SLValidadorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB21B41E9F8ABC000055C0 /* SLValidadorTests.m */; };
+		6AFB21C21E9F9D0D000055C0 /* SLValidador.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB21C11E9F9D0D000055C0 /* SLValidador.m */; };
+		6AFB21C31E9F9D0D000055C0 /* SLValidador.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB21C11E9F9D0D000055C0 /* SLValidador.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		6AFB21B01E9F8ABC000055C0 /* SLValidadorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SLValidadorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFB21B41E9F8ABC000055C0 /* SLValidadorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLValidadorTests.m; sourceTree = "<group>"; };
 		6AFB21B61E9F8ABC000055C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AFB21C01E9F9D0D000055C0 /* SLValidador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLValidador.h; path = ../../../Library/SLValidador.h; sourceTree = "<group>"; };
+		6AFB21C11E9F9D0D000055C0 /* SLValidador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLValidador.m; path = ../../../Library/SLValidador.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 		6AFB21BF1E9F8ADD000055C0 /* SLValidador */ = {
 			isa = PBXGroup;
 			children = (
+				6AFB21C01E9F9D0D000055C0 /* SLValidador.h */,
+				6AFB21C11E9F9D0D000055C0 /* SLValidador.m */,
 			);
 			name = SLValidador;
 			sourceTree = "<group>";
@@ -220,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AFB21A21E9F8ABC000055C0 /* ViewController.m in Sources */,
+				6AFB21C21E9F9D0D000055C0 /* SLValidador.m in Sources */,
 				6AFB219F1E9F8ABC000055C0 /* AppDelegate.m in Sources */,
 				6AFB219C1E9F8ABC000055C0 /* main.m in Sources */,
 			);
@@ -230,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AFB21B51E9F8ABC000055C0 /* SLValidadorTests.m in Sources */,
+				6AFB21C31E9F9D0D000055C0 /* SLValidador.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
