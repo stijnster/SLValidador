@@ -150,7 +150,7 @@ char LetrasNIFEXT[] = {'X', 'Y', 'Z'};
             } else if((var12 == 1) && [self carac:var15[8] EnCad:Letras] && [self carac:var15[var13] EnCad:LetrasNIF] && (var13 == 8)) {
                 NSString *var18 = [var1 substringWithRange:NSMakeRange(0, var13)];
 
-                var6 = [var18 longLongValue];
+                var6 = [var18 integerValue];
                 var8 = var6 % 23L;
                 if(var8 + 1L > 23L) {
                     return SLValidador_NIF_ERROR_NUM;
@@ -169,7 +169,7 @@ char LetrasNIFEXT[] = {'X', 'Y', 'Z'};
                     var3 = [var2 intValue];
                     if((var3 >= 1) && (var3 <= 56)) {
                         var2 = [var1 substringWithRange:NSMakeRange(1, var14)];
-                        var6 = [var2 longLongValue];
+                        var6 = [var2 integerValue];
                         var8 = var6 % 23L;
                         ++var8;
                         if(var8 > 23L) {
@@ -189,7 +189,7 @@ char LetrasNIFEXT[] = {'X', 'Y', 'Z'};
                 return SLValidador_NIF_ERROR;
             } else if(var12 == 2 && [self carac:var15[0] EnCad:LetrasNIFEXT] && [self carac:var15[var14] EnCad:LetrasNIF] && (var14 == 8)) {
                 var2 = [var1 substringWithRange:NSMakeRange(1, var14)];
-                var6 = [var2 longLongValue];
+                var6 = [var2 integerValue];
                 if(var15[0] == 89) {
                     var6 += 10000000L;
                 } else if(var15[0] == 90) {
