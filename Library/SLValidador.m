@@ -10,15 +10,15 @@
 
 @implementation SLValidador
 
-char Numeros[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-char Letras[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z'};
-char LetrasNIF[] = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
-char Letras2CIF[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
-char LetrasCIF[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'U', 'V'};
-char LetrasCIFORG_Y_EXTR[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'P', 'Q', 'S', 'N', 'W', 'R'};
-char LetrasREGATRIBRENTAS[] = {'E', 'G', 'H', 'J', 'U', 'V'};
-char LetrasCIFEXT[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'N', 'W'};
-char LetrasNIFEXT[] = {'X', 'Y', 'Z'};
+char Numeros[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '\0'};
+char Letras[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z', '\0'};
+char LetrasNIF[] = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', '\0'};
+char Letras2CIF[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', '\0'};
+char LetrasCIF[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'U', 'V', '\0'};
+char LetrasCIFORG_Y_EXTR[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'P', 'Q', 'S', 'N', 'W', 'R', '\0'};
+char LetrasREGATRIBRENTAS[] = {'E', 'G', 'H', 'J', 'U', 'V', '\0'};
+char LetrasCIFEXT[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'N', 'W', '\0'};
+char LetrasNIFEXT[] = {'X', 'Y', 'Z', '\0'};
 
 -(NSInteger)checkNif:(NSString *)number{
     return (number != NULL) && ([number length] == 9) ? [self vNif:number] : SLValidador_NIF_ERROR;
