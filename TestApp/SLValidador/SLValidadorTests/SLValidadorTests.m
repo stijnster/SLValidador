@@ -171,8 +171,43 @@
     XCTAssert([validador vNif:@"S3083156D"] == SLValidador_CIF_ORGANIZACION_OK, "wrong answer");
     XCTAssert([validador vNif:@"F79247318"] == SLValidador_CIF_OK, "wrong answer");
     XCTAssert([validador vNif:@"S6981484F"] == SLValidador_CIF_ORGANIZACION_OK, "wrong answer");
+    XCTAssert([validador vNif:@"V7937974I"] == SLValidador_NIF_ERROR, "wrong answer"); // ISSUE; mixed results in various tests
     
-    XCTAssert([validador vNif:@"V7937974I"] == SLValidador_NIF_ERROR, "wrong answer"); // ISSUE
+    //NIF 3
+    XCTAssert([validador vNif:@"14540135H"] == SLValidador_NIF_OK, "wrong answer");
+    XCTAssert([validador vNif:@"08819047L"] == SLValidador_NIF_OK, "wrong answer");
+    XCTAssert([validador vNif:@"13496084Y"] == SLValidador_NIF_OK, "wrong answer");
+    XCTAssert([validador vNif:@"99039409Y"] == SLValidador_NIF_OK, "wrong answer");
+    XCTAssert([validador vNif:@"48464231B"] == SLValidador_NIF_OK, "wrong answer");
+    XCTAssert([validador vNif:@"32394101G"] == SLValidador_NIF_OK, "wrong answer");
+    XCTAssert([validador vNif:@"66383371N"] == SLValidador_NIF_OK, "wrong answer");
+    XCTAssert([validador vNif:@"67239784C"] == SLValidador_NIF_OK, "wrong answer");
+    XCTAssert([validador vNif:@"42251394A"] == SLValidador_NIF_OK, "wrong answer");
+    XCTAssert([validador vNif:@"64432178R"] == SLValidador_NIF_OK, "wrong answer");
+    
+    //NIE 3
+    XCTAssert([validador vNif:@"Z9788982A"] == SLValidador_NIF_EXTRANJEROS, "wrong answer");
+    XCTAssert([validador vNif:@"X8586267E"] == SLValidador_NIF_EXTRANJEROS, "wrong answer");
+    XCTAssert([validador vNif:@"Y4829080Z"] == SLValidador_NIF_EXTRANJEROS, "wrong answer");
+    XCTAssert([validador vNif:@"Y3334345A"] == SLValidador_NIF_EXTRANJEROS, "wrong answer");
+    XCTAssert([validador vNif:@"Z5556891G"] == SLValidador_NIF_EXTRANJEROS, "wrong answer");
+    XCTAssert([validador vNif:@"Y8340579B"] == SLValidador_NIF_EXTRANJEROS, "wrong answer");
+    XCTAssert([validador vNif:@"Y3608498L"] == SLValidador_NIF_EXTRANJEROS, "wrong answer");
+    XCTAssert([validador vNif:@"X8281577J"] == SLValidador_NIF_EXTRANJEROS, "wrong answer");
+    XCTAssert([validador vNif:@"Y2573188P"] == SLValidador_NIF_EXTRANJEROS, "wrong answer");
+    XCTAssert([validador vNif:@"Y2254506Z"] == SLValidador_NIF_EXTRANJEROS, "wrong answer");
+    
+    //CIF 3
+    XCTAssert([validador vNif:@"A14139554"] == SLValidador_CIF_OK, "wrong answer");
+    XCTAssert([validador vNif:@"A55491344"] == SLValidador_CIF_OK, "wrong answer");
+    XCTAssert([validador vNif:@"Q7185943C"] == SLValidador_CIF_ORGANIZACION_OK, "wrong answer");
+    XCTAssert([validador vNif:@"B47951835"] == SLValidador_CIF_OK, "wrong answer");
+    XCTAssert([validador vNif:@"C70587258"] == SLValidador_CIF_OK, "wrong answer");
+    XCTAssert([validador vNif:@"B96955224"] == SLValidador_CIF_OK, "wrong answer");
+    XCTAssert([validador vNif:@"E86011681"] == SLValidador_CIF_NORESIDENTES_OK, "wrong answer");
+    XCTAssert([validador vNif:@"R4725128E"] == SLValidador_CIF_ORGANIZACION_OK, "wrong answer");
+    XCTAssert([validador vNif:@"P7510638E"] == SLValidador_CIF_ORGANIZACION_OK, "wrong answer");
+    XCTAssert([validador vNif:@"S6061053B"] == SLValidador_CIF_ORGANIZACION_OK, "wrong answer");
 }
 
 
