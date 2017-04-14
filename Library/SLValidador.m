@@ -24,23 +24,21 @@ char LetrasNIFEXT[] = {'X', 'Y', 'Z'};
     return (number != NULL) && ([number length] == 9) ? [self vNif:number] : SLValidador_NIF_ERROR;
 }
 
--(BOOL)carac:(char)var2 EnCad:(char[])var1{
-    BOOL var3 = false;
-    unsigned long var4 = strlen(var1);
-
-    for(int var5 = 0; var5 < var4; ++var5) {
-        if(var1[var5] == var2) {
-            var3 = true;
+-(BOOL)carac:(char)charToTest EnCad:(char[])characterSet{
+    BOOL result = NO;
+    
+    for(int i = 0; i < strlen(characterSet); ++i) {
+        if(characterSet[i] == charToTest) {
+            result = true;
             break;
         }
     }
     
-    return var3;
+    return result;
 }
 
 -(NSInteger)vNif:(NSString *)var1{
     NSString *var2 = NULL;
-    BOOL var4 = false;
     int var5 = 0;
     long var6 = 0L;
     long var8 = 0L;
